@@ -70,7 +70,7 @@
         Visit the official website KNIME and select the Download option at top-right corner of the interface. Tick both the checkboxes, then click on the download button to proceed.
       </p>
       <div class="gallery">
-        <img src="assets/installation_step1.jpg" alt="Installation Step 1">
+        <img src="assets/installation_step1.jpg">
       </div>
       <p>
         Click the installation option that fits your operating system ( Windows, Linux or MacOS ).
@@ -80,15 +80,12 @@
         Follow all the onscreen instructions to complete the installation. Ensure a Java Runtime Environment (JRE) or Java Development Kit (JDK) must be available in order to run KNIME.
       </p>
       <div class="gallery">
-        <img src="assets/installation_step2.jpg" alt="Installation Step 2">
+        <img src="assets/installation_step2.jpg">
       </div>
       <p><strong>Step 3: Launch KNIME:</strong></p>
       <p>
         Open the application and explore the interface.
       </p>
-      <div class="gallery">
-        <img src="assets/installation_step3.jpg" alt="Installation Step 3">
-      </div>
     </section>
 
 
@@ -121,7 +118,7 @@
       
 
 
-    <section id="code-examples">
+    <section id="code-examples" class="visible">
       <h2>Code Examples:</h2>
       <p><strong>Creating a New Workflow in KNIME:</strong></p>
       <ul>
@@ -134,99 +131,125 @@
         <li>After running the node, we can see the complete dataset as the output.</li>
       </ol>
       <div class="gallery">
-        <img src="assets/code_output_placeholder.jpg" alt="Output Placeholder">
+        <img src="assets/code_output_placeholder.jpg">
       </div>
       <ol start="3">
         <li>Then we will create a branch from the CSV reader node and attach it to a GroupBy node.</li>
         <div class="gallery">
-            <img src="assets/code_groupby_configuration.jpg" alt="GroupBy Configuration">
+            <img src="assets/code_groupby_configuration.jpg">
           </div>
         <li>After clicking on the configure button of the GroupBy node, we will group the data by “Branch” and calculate the mean of the “Total” column.</li>
       </ol>
       <div class="gallery">
-        <img src="assets/code_groupby_configuration2.jpg" alt="GroupBy Configuration">
-        <img src="assets/code_groupby_configuration3.jpg" alt="GroupBy Configuration">
+        <img src="assets/code_groupby_configuration2.jpg">
+        <img src="assets/code_groupby_configuration3.jpg">
       </div>
       <ol start="5">
         <li>After doing this we will create a branch from the “GroupBy” node and attach it to a “Column renamer” node. After clicking on the configure button of this node, we will change the name of the column from “Mean (Total)” to “Average Transaction Value”.</li>
       </ol>
       <div class="gallery">
-        <img src="assets/code_column_renamer_configuration.jpg" alt="Column Renamer Configuration">
-        <img src="assets/code_column_renamer_configuration1.jpg" alt="Column Renamer Configuration">
+        <img src="assets/code_column_renamer_configuration.jpg">
+        <img src="assets/code_column_renamer_configuration1.jpg">
       </div>
       <ol start="6">
         <li>Then we will attach a branch from the “Column Renamer” node to the “Bar Graph” node that will create a visual representation of the data.</li>
       </ol>
       <div class="gallery">
-        <img src="assets/code_bar_graph_output.jpg" alt="Bar Graph Output">
+        <img src="assets/code_bar_graph_output.jpg">
       </div>
       <ol start="7">
         <li>Then we will do a similar thing and create a branch from “CSV reader” to a GroupBy node. We will group “Product Line”, and calculate the count of the “Quantity” column.</li>
       </ol>
       <div class="gallery">
-        <img src="assets/code_product_line_grouping.jpg" alt="Product Line Grouping">
-        <img src="assets/code_product_line_grouping1.jpg" alt="Product Line Grouping">
-        <img src="assets/code_product_line_grouping2.jpg" alt="Product Line Grouping">
+        <img src="assets/code_product_line_grouping.jpg">
+        <img src="assets/code_product_line_grouping1.jpg">
+        <img src="assets/code_product_line_grouping2.jpg">
       </div>
       <ol start="8">
         <li>Then we will create a pie chart using a pie chart node.</li>
       </ol>
       <div class="gallery">
-        <img src="assets/code_pie_chart_output.jpg" alt="Pie Chart Output">
+        <img src="assets/code_pie_chart_output.jpg">
       </div>
       <ol start="9">
         <li>Then we will create another branch from “CSV reader” to a GroupBy node. We will group “Customer Type”, and calculate the mean of the “Total” column.</li>
       </ol>
       <div class="gallery">
-        <img src="assets/code_customer_type_grouping.jpg" alt="Customer Type Grouping">
-        <img src="assets/code_customer_type_grouping1.jpg" alt="Customer Type Grouping">
-        <img src="assets/code_customer_type_grouping2.jpg" alt="Customer Type Grouping">
+        <img src="assets/code_customer_type_grouping.jpg">
+        <img src="assets/code_customer_type_grouping1.jpg">
+        <img src="assets/code_customer_type_grouping2.jpg">
       </div>
       <ol start="10">
         <li>Then we will create a bar graph using a bar graph node.</li>
       </ol>
       <div class="gallery">
-        <img src="assets/code_final_bar_graph.jpg" alt="Final Bar Graph">
+        <img src="assets/code_final_bar_graph.jpg">
       </div>
       <p><strong>Let’s create the 2nd KNIME Workflow:</strong></p>
       <ol>
         <li>Drag-and-drop a “CSV Reader” node onto the Workflow editor and then configure it to import your csv file.</li>
-        <li>Now click on apply, and run the node. You can see the whole dataset as an output.</li>
       </ol>
       <div class="gallery">
-        <img src="assets/code_2nd_workflow_output.jpg" alt="2nd Workflow Output">
+        <img src="assets/code_2nd_workflow_output.jpg">
       </div>
+      <ol start="2">
+        <li>Now click on apply, and run the node. You can see the whole dataset as an output.</li>
+      </ol>
       <ol start="3">
         <li>Connect an output port of the “CSV Reader” node to the input port of “Missing Value” node.</li>
         <li>Now configure it to set the missing values of:<br>
-            &nbsp;&bull; Price_per_Quintal → Median<br>
-            &nbsp;&bull; Demand_Index → Mean<br>
-            &nbsp;&bull; Other categorical columns → Replace with "Do nothing"
-        </li>
+          &nbsp;&bull; Price_per_Quintal → Median<br>
+          &nbsp;&bull; Demand_Index → Mean<br>
+          &nbsp;&bull; Other categorical columns → Replace with "Do nothing"
+      </li>
       </ol>
       <div class="gallery">
-        <img src="assets/code_missing_value_configuration.jpg" alt="Missing Value Configuration">
+        <img src="assets/code_missing_value_configuration.jpg">
+        <img src="assets/code_missing_value_configuration1.jpg">
       </div>
+    
       <ol start="5">
         <li>Add a “Category to Number” node to convert categorical values to numerical.<br>
             Apply this transformation to the columns: Market, Crop, Quality_Grade, Transport_Mode, Farmer_Name, and Storage_Facility.
         </li>
+      </ol>
+      <div class="gallery">
+        <img src="assets/5.jpg">
+      </div>
+      <ol start="6">
         <li>Add a “Normalizer” node.<br>
             Then, apply Z-score normalization that Centers data around the mean with a standard deviation of 1 to:<br>
             Price_per_Quintal, Quantity_Available_Tonnes, and Demand_Index.
         </li>
+        <div class="gallery">
+          <img src="assets/6.jpg">
+        </div>
+      </ol>
+      <ol start="7">
         <li>Add a “K-Means” node, it clusters data into K groups based on similarity. It is an unsupervised learning algorithm that assigns each data point to the nearest cluster center. Set Number of Clusters to 4.<br>
             Use Price_per_Quintal, Quantity_Available_Tonnes, and Demand_Index as clustering attributes.
         </li>
+      </ol>
+      <div class="gallery">
+        <img src="assets/7.jpg">
+      </div>
+      <ol start="8">
         <li>Add a “Color Manager” node. Assign different colors to each Cluster for better visualization in reports, charts, and interactive views.</li>
+      </ol>
+      <div class="gallery">
+        <img src="assets/8.jpg">
+      </div>
+        <ol start="9">
         <li>Add a “Scatter Plot” node to visualize relationships between Price_per_Quintal and Demand_Index.<br>
             Set Horizontal-axis to Price_per_Quintal, Vertical-axis to Demand_Index and Color by Cluster.
         </li>
+        <div class="gallery">
+          <img src="assets/9.jpg">
+        </div>
+      </ol>
+      <ol start="10"></ol>
         <li>You can see the scatter plot as the output in the node monitor.</li>
       </ol>
-      <div class="gallery">
-        <img src="assets/code_scatter_plot_output.jpg" alt="Scatter Plot Output">
-      </div>
     </section>
 
     <section id="use-cases">
